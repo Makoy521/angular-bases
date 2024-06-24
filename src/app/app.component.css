@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: transparent;
+  min-height: calc(100vh - (100px + 0px));
+  overflow-x: hidden; /* Ocultar desplazamiento horizontal */
+}
+
+.card-fondito {
+  background-color: rgb(51, 60, 135, 0.8);
+  color: #fff;
+  width: 24rem;
+  padding: 5em;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.card-header {
+  background-color: transparent; /* Fondo transparente */
+  color: #fff; /* Color del texto */
+}
+
+.container-full {
+  display: flex;
+  width: 100%;
+}
+
+.half-width-container {
+  width: 0%;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background-image: url('./fondo.jpg');
+  background-size: cover; /* Asegura que la imagen cubra toda el área del elemento */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;
+}
+
+.content-container {
+  width: 100%;
+  background-image: url('./fondo.jpg');
+  background-size: cover; /* Asegura que la imagen cubra toda el área del elemento */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1600px) {
+  .content-container {
+    width: 50%;
+    background-image: none; /* Elimina la imagen de fondo */
+    background-color: rgb(51, 60, 135);
+    overflow-x: hidden; /* Asegurar que no haya desplazamiento horizontal */
+  }
+  .half-width-container{
+    width: 50%;
+  }
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  height: 150px;
+  width: 300px;
+  background-image: url('./logo_generico.png');
+  background-size: contain; /* Ajusta la imagen para que esté completamente contenida en el contenedor */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form {
+  background: transparent;
+}
+
+img {
+  margin-top: 2em!important;
+  margin-left: 1em!important;
+}
+
+.sistema {
+  margin-top: 10em;
+  font-family: 'Inter', sans-serif!important;
+  text-align: left !important;
+  font-size: 9.5pt !important;
+  color: white;
+  z-index: -2;
+}
+
+.form-control {
+  background-color: transparent !important;
+  display: block;
+  border: none; /* Elimina los bordes predeterminados */
+  border-bottom: 1px solid #fff; /* Agrega un borde inferior */
+  color: #fff; /* Color del texto */
+}
+
+input::placeholder {
+  color: #fff; /* Color del placeholder */
+}
+
+input:focus {
+  background: transparent;
+  outline: none;
+  border-bottom: 1px solid #fff; /* Mantener el borde inferior en foco */
+  color: #fff; /* Color del texto */
+}
+
+input:placeholder-shown {
+  color: #fff; /* Color del texto cuando el placeholder se muestra */
+}
+
+input:focus-visible {
+  background: transparent;
+  outline: none;
+}
+
+input::selection {
+  background-color: blue !important; /* Color del texto de la selección */
+}
+
+label {
+  color: white!important;
+}
+
+h3 {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.pw {
+  align-content: center;
+  justify-content: center;
+}
+
+.btn-send {
+  margin-bottom: 1em;
+}
+
+#btn-enviar {
+  width: 5em !important;
+}
+
+a {
+  color: white;
+}
+
+.estiloLabel_2{
+  text-align: center;
+  color: #FF0000;
+  font-size: 12pt;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.estiloLabel_3{
+  text-align: center;
+  color: #FF0000;
+  font-size: 18px;
+  font-family: Arial;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.estiloEditTex {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+.footer-text {
+  position:absolute;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  text-align: right;
+}
+
+.custom-alert {
+  margin-left: -20%;
+  width: 140%;
+  color: rgb(255, 145, 0);
+}
+
+.custom-alert .underline{
+  text-decoration: underline;
+  color: rgb(255, 145, 0);
+}
+
+.loader {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #a19dad;
+  transform: rotateX(65deg) rotate(45deg);
+  transform: perspective(200px) rotateX(65deg) rotate(45deg);
+  color: #300cfd;
+  animation: layers1 1s linear infinite alternate;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 255, 0, 0.7);
+  animation: layerTr 1s linear infinite alternate;
+}
+
+@keyframes layers1 {
+  0% {
+    box-shadow: 0px 0px 0 0px;
+  }
+  90%,
+  100% {
+    box-shadow: 20px 20px 0 -4px;
+  }
+}
+@keyframes layerTr {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-25px, -25px) scale(1);
+  }
+}
